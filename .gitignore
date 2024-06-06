@@ -1,0 +1,23 @@
+# packages
+node_modules
+
+# env
+.env.local
+
+# output
+dist
+.vite
+
+# editors
+.vscode
+.idea
+
+# os
+.DS_Store
+
+# tests
+coverage
+.vitest-preview
+
+# code
+src/api/mocks/generated
