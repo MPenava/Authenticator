@@ -3,12 +3,23 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { MainLayout } from "@layout";
 
+import Dashboard from "@features/pages/Dashboard";
+
 export const routes = [
   {
     path: "/",
     element: <MainLayout />,
     errorElement: <>error</>,
-    children: [],
+    children: [
+      {
+        path: "/",
+        element: <Dashboard />,
+      },
+      {
+        path: "/settings",
+        element: <>Settings</>,
+      },
+    ],
   },
 ];
 
