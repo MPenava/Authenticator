@@ -79,6 +79,7 @@ module.exports = {
           "/^@shared/",
           "/^@tanstack/",
           "/@aws-amplify/",
+          "/aws-amplify/",
           [("parent", "sibling", "index")],
         ],
         newlinesBetween: "always",
