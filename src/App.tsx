@@ -11,13 +11,13 @@ import "@aws-amplify/ui-react/styles.css";
 const App = () => {
   return (
     <AuthProvider>
-      <UserActivityProvider>
-        <ThemeProvider>
-          <QueryProvider>
+      <ThemeProvider>
+        <QueryProvider>
+          <UserActivityProvider>
             <Router />
-          </QueryProvider>
-        </ThemeProvider>
-      </UserActivityProvider>
+          </UserActivityProvider>
+        </QueryProvider>
+      </ThemeProvider>
     </AuthProvider>
   );
 };
