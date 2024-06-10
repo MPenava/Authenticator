@@ -67,7 +67,7 @@ const ScreenSaverForm = () => {
               </small>
             </div>
             <Button
-              disabled={passcode.length === 6}
+              disabled={passcode.length !== 6}
               pt={{
                 root: {
                   className:

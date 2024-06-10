@@ -3,9 +3,19 @@ import { Outlet } from "react-router-dom";
 import mainitobaBackground from "@assets/scribe4all_background.svg";
 import imageSrc from "@assets/scribe4all.svg";
 
+import { ScreenSaverPage } from "@features/pages/ScreenSaverPage";
+
+import { useUserActivity } from "@providers";
+
 import { Image } from "primereact/image";
 
 const MainLayout = () => {
+  const user = useUserActivity();
+
+  if (!user?.isActive) {
+    return <ScreenSaverPage />;
+  }
+
   return (
     <div
       className="w-screen h-screen bg-cover bg-no-repeat overflow-auto"
