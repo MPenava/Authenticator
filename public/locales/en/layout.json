@@ -1,3 +1,10 @@
 {
-    "TRANSLATION_KEY": "Translation"
+    "TRANSLATION_KEY": "Translation",
+
+    "CHANGE_PASSWORD_TITLE": "Change password",
+    "CHANGE_PASSWORD_CURRENT_PASSWORD": "Curent password123",
+    "CHANGE_PASSWORD_NEW_PASSWORD": "New password",
+    "CHANGE_PASSWORD_CONFIRM_PASSWORD": "Confirm password",
+    "CHANGE_PASSWORD_BUTTON": "Change password"
+
 }

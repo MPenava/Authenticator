@@ -1,24 +1,16 @@
 import { useState } from "react";
 
-import { AccountSettings, Authenticator } from "@aws-amplify/ui-react";
+import { ChangePassword } from "@features/components";
+
+import { Authenticator } from "@aws-amplify/ui-react";
 
 import { signOut as globalSignOut } from "aws-amplify/auth";
 
 import { Button } from "primereact/button";
-import { Dialog } from "primereact/dialog";
 
 const Dashboard = () => {
   const [isVisibleChangePassModal, setVisibleChangePassModal] =
     useState<boolean>(false);
-
-  const handleSuccess = () => {
-    // eslint-disable-next-line no-alert
-    alert(
-      "Password is successfully changed. You will be logged out in a few moments..."
-    );
-    setVisibleChangePassModal(false);
-    globalSignOut({ global: true });
-  };
 
   const handleGlobalSignOut = () => {
     globalSignOut({ global: true });
@@ -77,16 +69,12 @@ const Dashboard = () => {
       >
         Send request
       </Button>
-      <Dialog
+      <ChangePassword
         visible={isVisibleChangePassModal}
-        onHide={() => setVisibleChangePassModal(false)}
-        pt={{
-          header: { className: "p-0 border-none" },
-          content: { className: "p-5" },
+        handleClose={() => {
+          setVisibleChangePassModal(false);
         }}
-      >
-        <AccountSettings.ChangePassword onSuccess={handleSuccess} />
-      </Dialog>
+      />
     </div>
   );
 };
